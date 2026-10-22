@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Analytics · Smart Campus AI</title><link rel="stylesheet" href="assets/css/style.css"></head>
+<body data-page="analytics"><div class="layout"><aside id="sidebar" class="sidebar"></aside>
+<div class="main"><header id="topbar" class="topbar"></header><main class="content"><h1>Analytics</h1>
+<div class="toolbar"><button id="run" class="btn primary">🧠 Новый цикл анализа</button></div><section id="riskKpis" class="kpis"></section>
+<section class="grid"><div class="card"><h3>Энергия: факт и базовая линия</h3><div class="chart"><canvas id="baseChart"></canvas></div></div><div class="card"><h3>История показаний (z-score)</h3><div class="toolbar"><select id="hRoom"></select><select id="hParam"><option value="co2">CO₂</option><option value="temperature">Температура</option><option value="energy">Энергия</option></select></div><div class="chart" style="height:200px"><canvas id="histChart"></canvas></div></div></section>
+<h3>Обнаруженные аномалии</h3><div class="card table-wrap"><table><thead><tr><th>Помещение</th><th>Параметр</th><th>Значение</th><th>z-score</th><th>Риск</th><th>Причина</th><th>Рекомендация</th></tr></thead><tbody id="anTbody"></tbody></table></div>
+<p class="muted">Методы: пороги (температура 28/32 °C, CO₂ 1000/1500 ppm, энергия +30%/+60% к базе) и z-score &gt; 2 по последним 10 показаниям. Это статистика и правила, а не генеративный AI.</p>
+</main></div></div>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<script src="assets/js/data.js"></script><script src="assets/js/storage.js"></script><script src="assets/js/ai.js"></script><script src="assets/js/layout.js"></script>
+<script src="assets/js/analytics.js"></script></body></html>

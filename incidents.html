@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Incidents · Smart Campus AI</title><link rel="stylesheet" href="assets/css/style.css"></head>
+<body data-page="incidents"><div class="layout"><aside id="sidebar" class="sidebar"></aside>
+<div class="main"><header id="topbar" class="topbar"></header><main class="content"><h1>Incidents</h1>
+<form id="incForm" class="card form"><input type="hidden" id="incId">
+<label>Название<input id="title" required maxlength="80"></label><label>Помещение<select id="room"></select></label>
+<label>Приоритет<select id="priority"><option value="low">Низкий</option><option value="medium" selected>Средний</option><option value="high">Высокий</option></select></label>
+<label>Ответственный<input id="assignee" value="Инженер"></label><label class="wide">Комментарий<input id="comment" maxlength="200"></label>
+<div class="wide"><button class="btn primary" id="saveBtn">Добавить</button> <button type="button" id="cancelBtn" class="btn hidden">Отмена</button></div></form>
+<div class="toolbar"><select id="fStatus"><option value="">Все статусы</option><option value="open">Открыт</option><option value="in_progress">В работе</option><option value="done">Выполнен</option></select>
+<select id="fPriority"><option value="">Любой приоритет</option><option value="high">Высокий</option><option value="medium">Средний</option><option value="low">Низкий</option></select></div>
+<div class="card table-wrap"><table><thead><tr><th>#</th><th>Проблема</th><th>Помещение</th><th>Приоритет</th><th>Статус</th><th>Ответственный</th><th>Создан</th><th></th></tr></thead><tbody id="tbody"></tbody></table></div>
+</main></div></div>
+<script src="assets/js/data.js"></script><script src="assets/js/storage.js"></script><script src="assets/js/ai.js"></script><script src="assets/js/layout.js"></script>
+<script src="assets/js/incidents.js"></script></body></html>

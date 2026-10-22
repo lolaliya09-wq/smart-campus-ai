@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Вход · Smart Campus AI</title><link rel="stylesheet" href="assets/css/style.css"></head>
+<body><main class="login"><div class="card"><h1>🏫 Smart Campus AI</h1><p class="muted">Учебная форма входа. Роли только имитируются, это не настоящая защита.</p>
+<form id="loginForm"><input id="name" placeholder="Имя" value="Студент" required><input type="password" placeholder="Пароль (любой)">
+<select id="role"><option>Administrator</option><option>Engineer</option><option>Operator</option></select><button class="btn primary">Войти</button></form></div></main>
+<script src="assets/js/storage.js"></script><script>
+if(loadData("theme","dark")==="light")document.body.classList.add("light");
+if(loadData("sc_user",null))location.replace("dashboard.html");
+document.getElementById("loginForm").onsubmit=e=>{e.preventDefault();saveData("sc_user",{name:document.getElementById("name").value.trim(),role:document.getElementById("role").value});location.href="dashboard.html"};
+</script></body></html>
